@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+    
+    <div id="calculator">
+        <span id="change"><i class="far fa-sun"></i></span>
+        <div id="display">
+            <div data-previous-operand class="previous-operand">0</div>
+            <div data-current-operand class="current-operand">0</div>
+        </div>
+
+        <div id="buttons">
+            <div class="rows">
+                <span id="clear" class="operation">C</span>
+                <span id="backspace" class="operation">←</span>
+                <span id="extant" class="operation do" data-do="%">%</span>
+                <span id="divide" class="operation do" data-do="/">÷</span>
+
+            </div>
+            <div class="rows">
+                <span class="btn-number" data-input="7">7</span>
+                <span class="btn-number" data-input="8">8</span>
+                <span class="btn-number" data-input="9">9</span>
+                <span id="multiply" class="operation do" data-do="*">×</span>
+            </div>
+            <div class="rows">
+                <span class="btn-number" data-input="4">4</span>
+                <span class="btn-number" data-input="5">5</span>
+                <span class="btn-number" data-input="6">6</span>
+                <span id="minus" class="operation do" data-do="-">-</span>
+            </div>
+            <div class="rows">
+                <span class="btn-number" data-input="1">1</span>
+                <span class="btn-number" data-input="2">2</span>
+                <span class="btn-number" data-input="3">3</span>
+                <span id="plus" class="operation do" data-do="+">+</span>
+            </div>
+            <div class="rows">
+                <span id="zero" class="btn-number" data-input="0">0</span>
+                <span class="btn-number" data-input=".">.</span>
+                <span id="equal" class="operation" data-do="=">=</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="calculator.js"></script>
+</body>
+
+</html>

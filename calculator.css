@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+html,
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	font-family: "Poppins", sans-serif;
+	background: #485563; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #29323c, #485563);
+	background: linear-gradient(to right, #29323c, #485563);
+}
+
+#calculator {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	width: 350px;
+	height: 600px;
+	border-radius: 6px;
+	overflow: hidden;
+	background-color: rgb(32, 30, 30);
+	position: relative;
+}
+
+#calculator.active {
+	background-color: rgb(223, 225, 225);
+}
+
+#change {
+	position: absolute;
+	font-size: 15px;
+	color: white;
+	right: 8px;
+	top: 8px;
+	cursor: pointer;
+}
+
+#calculator.active #change {
+	color: #000;
+}
+
+#display {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	flex-direction: column;
+	color: #fff;
+	height: 300px;
+	margin: 5px;
+	border-bottom: 1px solid rgb(187, 173, 173);
+}
+
+#calculator.active #display {
+	color: rgb(58, 58, 58);
+	border-bottom: 1px solid rgb(68, 82, 82);
+}
+
+.previous-operand {
+	color: rgb(191, 190, 190);
+	margin-bottom: 5px;
+	font-size: 17px;
+}
+
+#calculator.active .previous-operand {
+	color: rgb(64, 65, 65);
+}
+
+.current-operand {
+	font-size: 40px;
+}
+
+#buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.rows {
+	width: 100%;
+	height: 25%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#buttons span {
+	color: #ffffff;
+	flex-basis: 20%;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	border-radius: 10px;
+	cursor: pointer;
+	user-select: none;
+}
+
+#calculator.active #buttons span {
+	color: rgb(94, 94, 94);
+	background-color: rgb(206, 204, 204);
+}
+
+#buttons span.operation {
+	background-color: #161313;
+}
+
+#calculator.active #buttons span.operation {
+	background-color: rgb(174, 214, 174);
+	color: rgb(68, 147, 68);
+}
+
+#zero {
+	flex-basis: 50% !important;
+}
+
+#equal {
+	background-color: #544d4d !important;
+}
+
+#calculator.active #buttons #equal {
+	background-color: rgb(220, 101, 101) !important;
+	color: rgb(218, 26, 26) !important;
+}
+
+#buttons span:active {
+	font-size: 23px;
+}
